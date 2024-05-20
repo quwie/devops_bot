@@ -256,7 +256,7 @@ def process_password(update: Update, _) -> int:
 
 def get_repl_logs(update: Update, _):
     result = execute_command(
-        f'cat /var/lib/postgresql/data/log/postgresql.log | grep replication')
+        f'sudo cat /var/log/postgresql/postgresql-14-main.log | grep repl')
     reply_long_messages(update, result)
 
 
