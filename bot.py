@@ -3,9 +3,12 @@ import re
 import paramiko
 import psycopg2
 import os
+from dotenv import load_dotenv
 
 from telegram import Update, ForceReply, ReplyKeyboardMarkup, ReplyKeyboardRemove
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, ConversationHandler, CallbackContext
+
+load_dotenv()
 
 TOKEN = str(os.getenv('BOT_TOKEN'))
 
