@@ -2,9 +2,7 @@ version: '3'
 
 services:
   bot:
-    build:
-      context: ./bot
-      dockerfile: Dockerfile
+    image: 192.168.0.107:5000/tg-bot
     environment:
       BOT_TOKEN: ${TOKEN}
       DB_NAME: ${DB_DATABASE}
@@ -24,9 +22,7 @@ services:
         ipv4_address: 172.20.0.4
 
   db:
-    build:
-      context: ./db
-      dockerfile: Dockerfile
+    image: 192.168.0.107:5000/tg-db
     environment:
       POSTGRES_DB: ${DB_DATABASE}
       POSTGRES_USER: ${DB_USER}
@@ -68,9 +64,7 @@ services:
       retries: 5
 
   db_repl:
-    build:
-      context: ./db_repl
-      dockerfile: Dockerfile
+    image: 192.168.0.107:5000/tg-db_repl
     environment:
       POSTGRES_USER: ${DB_REPL_USER}
       POSTGRES_PASSWORD: ${DB_REPL_PASSWORD}
