@@ -7,7 +7,7 @@ import os
 from telegram import Update, ForceReply, ReplyKeyboardMarkup, ReplyKeyboardRemove
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, ConversationHandler, CallbackContext
 
-TOKEN = os.getenv('BOT_TOKEN')
+TOKEN = str(os.getenv('BOT_TOKEN'))
 
 DB_NAME = os.getenv('DB_NAME')
 DB_USER = os.getenv('DB_USER')
