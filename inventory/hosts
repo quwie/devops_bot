@@ -1,0 +1,2 @@
+postgres_master ansible_host="{{ basic.hosts.postgres_master.ansible_host }}" ansible_user="{{ basic.hosts.postgres_master.ansible_user }}" ansible_password="{{ basic.hosts.postgres_master.ansible_password }}"
+postgres_replication ansible_host="{{ basic.hosts.postgres_replica.ansible_host }}" ansible_user="{{ basic.hosts.postgres_replica.ansible_user }}" ansible_password="{{ basic.hosts.postgres_replica.ansible_password }}"

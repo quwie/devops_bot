@@ -12,22 +12,11 @@
     git clone https://github.com/quwie/devops_bot.git
     ```
 
-2. Забилдите образы Docker:
+2. Перейдите в ветку ansible:
+
+
+3. Запустите конфиг используя команду:
 
     ```shell
-    docker-compose build
+    ansible-playbook -i inventory/hosts --extra-vars "@secret.yml" playbook_tg_bot.yml
     ```
-
-3. Запустите контейнеры Docker:
-
-    ```shell
-    docker-compose up -d
-    ```
-
-4. Убедитесь, что бот Telegram работает:
-
-    ```shell
-    docker-compose ps
-    ```
-
-    You should see the bot container listed as "Up".
